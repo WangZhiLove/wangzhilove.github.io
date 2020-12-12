@@ -6,15 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>诗我</title>
+  <title>Nacos Discovery 服务注册与发现，服务调用 | 诗我</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="诗我">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="服务的注册与发现Nacos Discovery 实现Spring Cloud的服务注册与发现 Nacos Discovery 整合Spring Cloud负载均衡合服务调用 Nacos Discovery进行服务的注册与发现Nacos Discovery的注册使用Aliyun Java Initializer来创建工程，创建页面如下：  上面不用说，重点在组建依赖和示例代码这，首先，选择组建依赖，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Nacos Discovery 服务注册与发现，服务调用">
+<meta property="og:url" content="http://example.com/2020/12/12/Nacos-Discovery-%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%8E%E5%8F%91%E7%8E%B0%EF%BC%8C%E6%9C%8D%E5%8A%A1%E8%B0%83%E7%94%A8/index.html">
 <meta property="og:site_name" content="诗我">
+<meta property="og:description" content="服务的注册与发现Nacos Discovery 实现Spring Cloud的服务注册与发现 Nacos Discovery 整合Spring Cloud负载均衡合服务调用 Nacos Discovery进行服务的注册与发现Nacos Discovery的注册使用Aliyun Java Initializer来创建工程，创建页面如下：  上面不用说，重点在组建依赖和示例代码这，首先，选择组建依赖，">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://uploader.shimo.im/f/XvybBH7qodooceAb.png!thumbnail?fileGuid=hqC6vDrxKpxjjgvH">
+<meta property="article:published_time" content="2020-12-12T03:07:09.000Z">
+<meta property="article:modified_time" content="2020-12-12T03:09:01.189Z">
 <meta property="article:author" content="王智">
+<meta property="article:tag" content="nacos discovery， 服务调用， OpenFeign，LoadBalance RestTemplate">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://uploader.shimo.im/f/XvybBH7qodooceAb.png!thumbnail?fileGuid=hqC6vDrxKpxjjgvH">
   
     <link rel="alternative" href="/atom.xml" title="诗我" type="application/atom+xml">
   
@@ -150,16 +157,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-Nacos-Discovery-服务注册与发现，服务调用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-Nacos-Discovery-服务注册与发现，服务调用" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/12/12/Nacos-Discovery-%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%8E%E5%8F%91%E7%8E%B0%EF%BC%8C%E6%9C%8D%E5%8A%A1%E8%B0%83%E7%94%A8/">Nacos Discovery 服务注册与发现，服务调用</a>
+    <h1 class="article-title" itemprop="name">
+      Nacos Discovery 服务注册与发现，服务调用
     </h1>
   
 
@@ -212,6 +217,27 @@
       
 
       
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
     </div>
     <div class="article-info article-info-index">
       
@@ -230,16 +256,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/12/12/Nacos-Discovery-%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%8E%E5%8F%91%E7%8E%B0%EF%BC%8C%E6%9C%8D%E5%8A%A1%E8%B0%83%E7%94%A8/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2020/12/12/Nacos-Discovery-%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%8E%E5%8F%91%E7%8E%B0%EF%BC%8C%E6%9C%8D%E5%8A%A1%E8%B0%83%E7%94%A8/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2020/12/11/nacos%E9%AB%98%E7%BA%A7%E9%85%8D%E7%BD%AE/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">nacos高级配置</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -259,628 +344,14 @@
 
 
 
-
   
-    <article id="post-nacos高级配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/12/11/nacos%E9%AB%98%E7%BA%A7%E9%85%8D%E7%BD%AE/">nacos高级配置</a>
-    </h1>
   
 
-        
-        <a href="/2020/12/11/nacos%E9%AB%98%E7%BA%A7%E9%85%8D%E7%BD%AE/" class="archive-article-date">
-  	<time datetime="2020-12-11T13:40:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="高级配置"><a href="#高级配置" class="headerlink" title="高级配置"></a>高级配置</h3><h4 id="namespace"><a href="#namespace" class="headerlink" title="namespace"></a>namespace</h4><p>命名空间是用于进行租户粒度的配置隔离，不同的命名空间下，可以存在相同的 Group 或 Data ID 的配置。Namespace 的常用场景之一是不同环境的配置的区分隔离，例如开发测试环境和生产环境的资源（如配置、服务）隔离等。</p>
-<p>在没有明确指定 ${spring.cloud.nacos.config.namespace} 配置的情况下， 默认使用的是 Nacos 上 Public 这个namespae。如果需要使用自定义的命名空间，可以通过以下配置来实现：spring.cloud.nacos.config.namespace=b3404bc0-d7dc-4855-b519-570ed34b62d7</p>
-<blockquote>
-<p>注：该配置必须放在 bootstrap.properties 文件中。此外 spring.cloud.nacos.config.namespace 的值是 namespace 对应的 id，id 值可以在 Nacos 的控制台获取。并且在添加配置时注意不要选择其他的 namespae，否则将会导致读取不到正确的配置。</p>
-</blockquote>
-<h4 id="group"><a href="#group" class="headerlink" title="group"></a>group</h4><p>在没有明确指定 ${spring.cloud.nacos.config.group} 配置的情况下， 默认使用的是 DEFAULT_GROUP 。如果需要自定义自己的 Group，可以通过以下配置来实现：</p>
-<p>spring.cloud.nacos.config.group=DEVELOP_GROUP</p>
-<blockquote>
-<p>注：该配置必须放在 bootstrap.properties 文件中。并且在添加配置时 Group 的值一定要和 spring.cloud.nacos.config.group 的配置值一致。</p>
-</blockquote>
-<p>说说这两个的区别：Namespace用于解决多环境以及多租户数据的隔离问题，也就是说实现多环境、多用户的场景；Group是用来实现Data ID的分组管理机制。官方的建议是Namespace区分不同的环境，Group专注于业务层面的数据分组。</p>
-<p>Data ID</p>
-<p>Nacos配置集的Id，组织划分系统的配置集，一般使用配置文件的名字来进行配置的划分。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># config external configuration</span><br><span class="line"># 1、Data Id 在默认的组 DEFAULT_GROUP,不支持配置的动态刷新</span><br><span class="line">spring.cloud.nacos.config.extension-configs[0].data-id&#x3D;ext-config-common01.properties</span><br><span class="line"># 2、Data Id 不在默认的组，不支持动态刷新</span><br><span class="line">spring.cloud.nacos.config.extension-configs[1].data-id&#x3D;ext-config-common02.properties</span><br><span class="line">spring.cloud.nacos.config.extension-configs[1].group&#x3D;GLOBALE_GROUP</span><br><span class="line"># 3、Data Id 既不在默认的组，也支持动态刷新</span><br><span class="line">spring.cloud.nacos.config.extension-configs[2].data-id&#x3D;ext-config-common03.properties</span><br><span class="line">spring.cloud.nacos.config.extension-configs[2].group&#x3D;REFRESH_GROUP</span><br><span class="line">spring.cloud.nacos.config.extension-configs[2].refresh&#x3D;true</span><br><span class="line">参考： https:&#x2F;&#x2F;leetcode-cn.com&#x2F;leetbook&#x2F;read&#x2F;spring_cloud_alibaba_bootcamp&#x2F;9pnn5s&#x2F;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>通过 spring.cloud.nacos.config.extension-configs[n].data-id 的配置方式来支持多个 Data Id 的配置。</li>
-</ul>
-<p>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
-<ul>
-<li>通过 spring.cloud.nacos.config.extension-configs[n].group 的配置方式自定义 Data Id 所在的组，不明确配置的话，默认是 DEFAULT_GROUP。</li>
-<li>通过 spring.cloud.nacos.config.extension-configs[n].refresh 的配置方式来控制该 Data Id 在配置变更时，是否支持应用中可动态刷新， 感知到最新的配置值。默认是不支持的。</li>
-</ul>
-<p>这其中需要注意两个点：</p>
-<ul>
-<li>data-id必须携带文件的扩展名</li>
-<li>多个data Id时，n越大，优先级越高</li>
-</ul>
-<p>还有更多内容参考：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/leetbook/read/spring_cloud_alibaba_bootcamp/9pdxj3/">https://leetcode-cn.com/leetbook/read/spring_cloud_alibaba_bootcamp/9pdxj3/</a></p>
-<p>这个算是额外的扩展，需要使用的时候才有场景，重要是config的实现原理，这个等以后看书的时候再进行详细的补充说明。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">nacos namespace group dataID</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/12/11/nacos%E9%AB%98%E7%BA%A7%E9%85%8D%E7%BD%AE/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-nacos分布式配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/12/11/nacos%E5%88%86%E5%B8%83%E5%BC%8F%E9%85%8D%E7%BD%AE/">nacos分布式配置</a>
-    </h1>
   
 
-        
-        <a href="/2020/12/11/nacos%E5%88%86%E5%B8%83%E5%BC%8F%E9%85%8D%E7%BD%AE/" class="archive-article-date">
-  	<time datetime="2020-12-11T06:43:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="NACOS实现分布式配置"><a href="#NACOS实现分布式配置" class="headerlink" title="NACOS实现分布式配置"></a>NACOS实现分布式配置</h2><h3 id="Nacos-Config"><a href="#Nacos-Config" class="headerlink" title="Nacos Config"></a>Nacos Config</h3><h4 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h4><p>Nacos Config的作用：</p>
-<ul>
-<li>作为Spring Cloud的分布式配置</li>
-<li>实现Bean的动态刷新</li>
-</ul>
-<p>具体操作：创建Spring Boot项目，然后选择starter的时候选择 Nacos Configuration，这步操作可能会出现未找到starter，原因是使用Spring Boot版本过高，笔者在进行测试的时候，可使用的Spring Boot的版本最高为2.2.13； 之后引入Spring Web和Spring Boot Actuator。至此，Nacos Config项目创建成功。</p>
-<h4 id="实现分布式配置"><a href="#实现分布式配置" class="headerlink" title="实现分布式配置"></a>实现分布式配置</h4><p><strong>使用Spring Boot结合nacos</strong>来实现配置的读取，需要的依赖：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>nacos-config-spring-boot-starter<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>0.2.7<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>接下来就是application.properties的配置和controller的编写</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">nacos.config.server-addr=<span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">8848</span></span><br><span class="line"><span class="meta">@NacosPropertySource(dataId = &quot;nacos-config-boot&quot;, autoRefreshed = true)</span></span><br><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">NacosConfigController</span> </span>&#123;</span><br><span class="line">    <span class="meta">@NacosValue(value = &quot;$&#123;name:local name&#125;&quot;, autoRefreshed = true)</span></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="meta">@GetMapping(&quot;/config&quot;)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">get</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>说明：</p>
-<ul>
-<li>NacosPropertySource：用于家在dataId为配置值的配置源，autoRefreshed表示是否自动更新</li>
-<li>NacosValue：设置属性值，冒号前为key，后为值，这里的local name表示默认值，如果key在配置文件中没有找到，就是用默认值，高可用策略。属性粒度的更新</li>
-</ul>
-<p>上面就是client的配置和编写，接下来就是server了，server直接从github<a target="_blank" rel="noopener" href="https://github.com/alibaba/nacos/releases">https://github.com/alibaba/nacos/releases</a>上下载，然后配置就可以，这里的配置分为几步：</p>
-<ul>
-<li>运行数据库（脚本在conf目录）</li>
-<li>修改数据库的连接（配置文件在conf目录）</li>
-<li>进行启动：如果是linux或者mac，请添加 -m standalone启动参数</li>
-</ul>
-<p>启动成功之后，访问localhost:8848/nacos，进入配置管理 - 配置列表，创建一个配置文件，创建配置文件参数：</p>
-<ul>
-<li>Data ID：表示Nacos中配置集的ID，通常用于组织划分系统的配置集，也就是一个服务模块一个</li>
-<li>Group：表示配置当前的所属组，一般是默认</li>
-<li>配置内容：根据所选的格式配置对应的内容就好</li>
-</ul>
-<p>还有一个地方注意：就是Nacos又一个命名空间的概念，可以划分不同的命名空间，来达到项目隔离的作用，不过一般也不用操作。</p>
-<p>内容配置完成之后启动，启动之后就可以访问client的接口，来进行配置文件变量的读取。</p>
-<p><strong>使用Spring Cloud Alibaba Nacos Config</strong></p>
-<p>由于笔者也是初学，所以这里吃了大亏，直接使用idea来创建Spring Boot项目，一早上读取不到nacos-server的配置信息，所以，如果是Spring Cloud Config，强烈推荐官方构建工具：<a target="_blank" rel="noopener" href="https://start.aliyun.com/bootstrap.html">https://start.aliyun.com/bootstrap.html</a>去进行选择，然后下载，下来下来的配置一般都是比较全的，不需要进行改动。</p>
-<p>具体的pom和配置信息如下：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">pom的依赖：</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-boot-starter-actuator&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;com.alibaba.cloud&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-cloud-starter-alibaba-nacos-config&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-boot-configuration-processor&lt;/artifactId&gt;</span><br><span class="line">    &lt;optional&gt;true&lt;/optional&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.projectlombok&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;lombok&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">bootstrap.properties的内容:</span><br><span class="line"># Nacos帮助文档: https://nacos.io/zh-cn/docs/concepts.html</span><br><span class="line"># Nacos认证信息</span><br><span class="line">spring.cloud.nacos.config.username=nacos</span><br><span class="line">spring.cloud.nacos.config.password=nacos</span><br><span class="line">spring.cloud.nacos.config.contextPath=/nacos</span><br><span class="line"># 设置配置中心服务端地址</span><br><span class="line">spring.cloud.nacos.config.server-addr=<span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">8848</span></span><br><span class="line"># Nacos 配置中心的namespace。需要注意，如果使用 public 的 namcespace ，请不要填写这个值，直接留空即可</span><br><span class="line">spring.cloud.nacos.config.namespace=</span><br><span class="line">application.properties的内容：</span><br><span class="line"># 应用名称</span><br><span class="line">spring.application.name=nacos-config-cloud</span><br><span class="line"># 应用服务 WEB 访问端口</span><br><span class="line">server.port=<span class="number">8080</span></span><br><span class="line"># Actuator Web 访问端口</span><br><span class="line">management.server.port=<span class="number">8081</span></span><br><span class="line">management.endpoints.jmx.exposure.include=*</span><br><span class="line">management.endpoints.web.exposure.include=*</span><br><span class="line">management.endpoint.health.show-details=always</span><br></pre></td></tr></table></figure>
-
-<p>之后到server端进行配置列表的管理，新增配置，流程同前面Spring Boot的config流程一样，接下来就是重点了，如何获取配置，这里有多种方法，先说直接使用Value注解：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@SpringBootApplication</span></span><br><span class="line"><span class="meta">@RefreshScope</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">NacosConfigCloudApplication</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Value(&quot;$&#123;user.name&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> String userName;</span><br><span class="line">    <span class="meta">@Value(&quot;$&#123;user.age&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line">  </span><br><span class="line">    <span class="meta">@PostConstruct</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;userName : &quot;</span> + userName + <span class="string">&quot;------age&quot;</span> + age);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@GetMapping(&quot;/config&quot;)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">config</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> userName + <span class="string">&quot; : &quot;</span> + age;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        ConfigurableApplicationContext context = SpringApplication.run(NacosConfigCloudApplication.class, args);</span><br><span class="line">        <span class="comment">// 获取配置内容</span></span><br><span class="line">        String name = context.getEnvironment().getProperty(<span class="string">&quot;user.name&quot;</span>);</span><br><span class="line">        String age = context.getEnvironment().getProperty(<span class="string">&quot;user.age&quot;</span>);</span><br><span class="line">        System.out.println(name + <span class="string">&quot; : &quot;</span> + age);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>RefreshScope：这个注解的作用是用来动态刷新配置的，修改配置可以不用重启，就可以直接读取到配置</li>
-</ul>
-<p>接下来就是第二种，使用Bean的方式来获取：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> lombok.Data;</span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.DisposableBean;</span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.InitializingBean;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.context.properties.ConfigurationProperties;</span><br><span class="line"><span class="keyword">import</span> org.springframework.cloud.context.config.annotation.RefreshScope;</span><br><span class="line"><span class="meta">@RefreshScope</span></span><br><span class="line"><span class="meta">@ConfigurationProperties(prefix = &quot;user&quot;)</span></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">User</span> <span class="keyword">implements</span> <span class="title">InitializingBean</span>, <span class="title">DisposableBean</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">destroy</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;destroy : &quot;</span> + toString());</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">afterPropertiesSet</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;afterPropertiesSet : &quot;</span> + toString());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 下面的两个方法是用来查询创建的一个流程，也就是当配置进行修改的时候，会先执行destroy方法，之后重新初始化。</span></span><br></pre></td></tr></table></figure>
-
-<p>启动类的修改：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> com.alibaba.cloud.nacos.NacosConfigManager;</span><br><span class="line"><span class="keyword">import</span> com.alibaba.cloud.nacosconfigcloud.domain.User;</span><br><span class="line"><span class="keyword">import</span> com.alibaba.nacos.api.config.listener.AbstractListener;</span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Value;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.ApplicationRunner;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.SpringApplication;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.autoconfigure.SpringBootApplication;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.context.properties.EnableConfigurationProperties;</span><br><span class="line"><span class="keyword">import</span> org.springframework.cloud.context.config.annotation.RefreshScope;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.ConfigurableApplicationContext;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Bean;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.GetMapping;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RestController;</span><br><span class="line"><span class="keyword">import</span> javax.annotation.PostConstruct;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.StringReader;</span><br><span class="line"><span class="keyword">import</span> java.util.Properties;</span><br><span class="line"><span class="meta">@SpringBootApplication</span></span><br><span class="line"><span class="meta">@RefreshScope</span></span><br><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="meta">@EnableConfigurationProperties(User.class)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">NacosConfigCloudApplication</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Value(&quot;$&#123;user.name&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> String userName;</span><br><span class="line">    <span class="meta">@Value(&quot;$&#123;user.age&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line">    <span class="keyword">private</span> User user;</span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setUser</span><span class="params">(User user)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.user = user;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@PostConstruct</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;userName : &quot;</span> + userName + <span class="string">&quot;------age&quot;</span> + age);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@GetMapping(&quot;/config&quot;)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">config</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> userName + <span class="string">&quot; : &quot;</span> + age;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@GetMapping(&quot;/user&quot;)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">user</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> user.toString();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        ConfigurableApplicationContext context = SpringApplication.run(NacosConfigCloudApplication.class, args);</span><br><span class="line">        String name = context.getEnvironment().getProperty(<span class="string">&quot;user.name&quot;</span>);</span><br><span class="line">        String age = context.getEnvironment().getProperty(<span class="string">&quot;user.age&quot;</span>);</span><br><span class="line">        System.out.println(name + <span class="string">&quot; : &quot;</span> + age);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 重点在于 @EnableConfigurationProperties(User.class) 注解</span></span><br></pre></td></tr></table></figure>
-
-<p>上面两种方法都可以获取配置信息，并且可以动态刷新。这仅仅是初步的使用，应用于生产环境的话可能是yml格式的，需要进行 spring.cloud.nacos.config.file-extension的配置，以及在不同的环境下读物不同的配置文件，比如说dev、test、prod等等。这些到时候分析原理的时候再仔细看。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">nacos 分布式配置 动态刷新配置</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/12/11/nacos%E5%88%86%E5%B8%83%E5%BC%8F%E9%85%8D%E7%BD%AE/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Spring到Spring-Cloud" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/12/10/Spring%E5%88%B0Spring-Cloud/">Spring到Spring Cloud</a>
-    </h1>
   
 
-        
-        <a href="/2020/12/10/Spring%E5%88%B0Spring-Cloud/" class="archive-article-date">
-  	<time datetime="2020-12-10T12:21:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h4><p>Spring框架 - 轻量级框架，针对于EJB等企业级开发框架来说，它不依赖于运行容器；框架本身很小；非侵入式，虽然使用框架，但是可以不依赖于Spring类。</p>
-<p>Spring的两个核心概念就是IOC和AOP：</p>
-<ul>
-<li>IOC - 控制反转，控制反转创建对象的权利以及对象之间的依赖关系。</li>
-<li>AOP - 面向切面编程，概念较多，实现原理其实就是动态代理。</li>
-</ul>
-<p>这两个后面详细说，这里稍微提及下。</p>
-<h4 id="Spring-Boot"><a href="#Spring-Boot" class="headerlink" title="Spring Boot"></a>Spring Boot</h4><p>随着Spring的发展而逐渐变的臃肿，Pivotal推出了Spring Boot来解决这个问题，Spring Boot的两大核心是：</p>
-<ul>
-<li>起步依赖，starter方便开发者进行依赖和集成。</li>
-<li>约定大于配置，一种思想，引入starter只需要少量配置就可以将框架进行集成工作。</li>
-</ul>
-<p>约定大于配置中解决了Spring中引入框架而需要进行大量配置的问题，其实这个和starter也有管理，Spring Boot会在引入starter的时候进行很多默认的配置，所以才会出现这种开发者只需要少量配置就可以集成框架的局面。</p>
-<p>官方对Spring Boot的特色定义：</p>
-<ul>
-<li>创建独立的Spring应用程序</li>
-<li>直接嵌入Tomcat、Jetty或Undertow，无须部署war文件</li>
-<li>starter依赖简化构建配置</li>
-<li>尽可能自动配置Spring和第三方库</li>
-<li>提供可用于生产的功能，例如指标、运行状况检查和外部化配置等</li>
-<li>完全没有代码生成，也不需要XML配置</li>
-</ul>
-<h4 id="Spring-Cloud"><a href="#Spring-Cloud" class="headerlink" title="Spring Cloud"></a>Spring Cloud</h4><p>Spring Cloud是针对于分布式系统开发所做的通用抽象，是标准模式的实现。</p>
-<p>也就是说Spring Cloud是以微服务为核心的分布式系统的一个构建标准，他需要具体的实现，比如说分布式追踪、服务注册、配置服务等来提供必不可少的支持性功能。</p>
-<h4 id="Spring-Cloud-Alibaba"><a href="#Spring-Cloud-Alibaba" class="headerlink" title="Spring Cloud Alibaba"></a>Spring Cloud Alibaba</h4><p>Spring Cloud Alibaba其实就是Spring Cloud的一个标准的实现，当然还有更多的实现，比如说最开始用的Netflix，只不过由于后期的闭源而逐渐转向其它的实现。</p>
-<p>Spring Cloud Alibaba是：</p>
-<ul>
-<li>Spring Cloud的一个标准实现</li>
-<li>以微服务为核心的整体解决方案</li>
-<li>开源与平台服务分开维护</li>
-</ul>
-<p>其实就是根据cloud的功能去做具体的实现，比如说Dubbo去实现RPC调用、Nacos去实现服务的发现与注册以及分布式配置、Sentinel实现断路器等。</p>
-<p>这里只说开源部分吧：</p>
-<ul>
-<li>Sentinel：把流量作为切入点，从流量控制、熔断降级、系统负载保护等多个维度保护服务的稳定性</li>
-<li>Nacos：一个更易于构建云原生应用的动态服务发现、配置管理和服务管理平台</li>
-<li>RocketMQ：一款开源的分布式消息系统，基于高可用分布式集群技术，提供低延时的、高可靠的消息发布与订阅服务</li>
-<li>Dubbo：一款Java高性能的RPC框架</li>
-<li>Seata：一个易于使用的高性能微服务分布式事务解决方案</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Spring、Spring Boot、Spring Cloud</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/12/10/Spring%E5%88%B0Spring-Cloud/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-架构发展史" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/12/09/%E6%9E%B6%E6%9E%84%E5%8F%91%E5%B1%95%E5%8F%B2/">架构发展史</a>
-    </h1>
-  
-
-        
-        <a href="/2020/12/09/%E6%9E%B6%E6%9E%84%E5%8F%91%E5%B1%95%E5%8F%B2/" class="archive-article-date">
-  	<time datetime="2020-12-09T11:24:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>架构发展史</p>
-<ul>
-<li><p>单体架构</p>
-</li>
-<li><ul>
-<li><p>也有简单的发展，最开始几乎都是单人开发单体应用，现在的大学毕设好像还是这样。这个时候所有逻辑都放在一起；</p>
-</li>
-<li><p>MVC拆分结构，按照技术职责进行水平拆分，层与层之间单向依赖。</p>
-</li>
-<li><p>优点</p>
-</li>
-<li><ul>
-<li>开发简单：单体应用，简单方便，相对于多应用之间的来回跳转寻找逻辑来说；</li>
-<li>测试简单：代码一个应用，方便端到端测试；</li>
-<li>部署简单：部署永远一个应用，集群部署多份就好；</li>
-<li>开发迅速：软件功能需求可以快速实现。</li>
-</ul>
-</li>
-<li><p>缺点（单体架构的缺点其实根本原因在于规模扩大（功能、团队））</p>
-</li>
-<li><ul>
-<li>应用膨胀：代码都在一个应用，维护起来非常不方便，所有人都修改和维护的一个应用；</li>
-<li>团队合作冲突：这个其实就是版本管理的问题；</li>
-<li>运行效率和稳定性：一个应用启动需要初始化所有的模块；应用一个模块挂了，会导致整个应用宕机。</li>
-</ul>
-</li>
-<li><p>其实从优点和缺点可以看出来，没有完美的架构，只有最合适当下业务的架构。</p>
-</li>
-</ul>
-</li>
-<li><p>SOA面向服务架构</p>
-</li>
-<li><ul>
-<li><p>核心思想是”将系统的功能结构为一系列服务”，服务是SOA架构的核心；</p>
-</li>
-<li><p>SOA架构区别于MVC的水平拆分，是根据业务对应用进行垂直拆分，这个时候单体应用就会变成多个独立的应用，这个时候就涉及到应用间的依赖、调用等问题，需要更多的技术方案来解决这些问题：</p>
-</li>
-<li><ul>
-<li>XML(数据传输格式) - 以文档格式描述消息中的数据</li>
-<li>SOAP(数据传输协议) - 计算机网络上交换基于XML的消息协议，通常是用HTTP</li>
-<li>WSDL(Web服务描述语言) - 基于XML的描述语言，用于描述与服务交互所需的服务的公共接口、协议绑定、消息格式</li>
-<li>UDDI(统一描述、发现和继承) - 基于XML的注册协议，用于发布WSDL并允许第三方发现这些服务</li>
-<li>ESB(企业服务总线) - 支持异构环境中的服务、消息，以及基于事件的交互，并且具有适当的服务级别和可管理性</li>
-</ul>
-</li>
-<li><p>缺点</p>
-</li>
-<li><ul>
-<li>高门槛：ESB的复杂性是的SOA的实现对开发人员的要求很高</li>
-<li>厂商绑定：不同的厂商SOA实现不同，没有统一的标准</li>
-<li>中心化：还是ESB的问题，应用本身实现了分布式和水平扩展，但是ESB却成了系统的中枢神经</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>微服务架构</p>
-</li>
-<li><ul>
-<li><p>SOA解决问题是复用(垂直拆分的服务可复用)，微服务解决的问题是扩展</p>
-</li>
-<li><p>SOA和微服务的对比</p>
-</li>
-<li><ul>
-<li><p>通信方式</p>
-</li>
-<li><ul>
-<li>SOA基于ESB，SOAP，WSDL等重协议</li>
-<li>微服务使用点对点通信，开放式协议如RESTFUL、gRPC或者轻量级的二进制协议</li>
-</ul>
-</li>
-<li><p>数据管理</p>
-</li>
-<li><ul>
-<li>SOA是全局数据模型以及共享存储</li>
-<li>每个服务独立模型和存储</li>
-</ul>
-</li>
-<li><p>服务粒度</p>
-</li>
-<li><ul>
-<li>SOA较粗</li>
-<li>微服务较细</li>
-</ul>
-</li>
-<li><p>诞生背景</p>
-</li>
-<li><ul>
-<li>SOA企业级应用</li>
-<li>微服务互联网</li>
-</ul>
-</li>
-<li><p>解决的问题</p>
-</li>
-<li><ul>
-<li>SOA面向企业内，系统集成</li>
-<li>微服务面向最终产品，解决扩展、维护的问题</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>微服务的几个重要概念</p>
-</li>
-<li><ul>
-<li>一套小服务</li>
-<li>独立进程 </li>
-<li>轻量级通信协议</li>
-<li>可独立部署</li>
-<li>多语言和不同存储技术</li>
-</ul>
-</li>
-<li><p>微服务需要考虑的问题</p>
-</li>
-<li><ul>
-<li>通过服务实现组件化</li>
-<li>根据业务组织系统</li>
-<li>做产品而不是做项目</li>
-<li>简单高效的通信协议</li>
-<li>自动化基础设施</li>
-<li>面向失败的设计</li>
-<li>具备进化能力的设计</li>
-</ul>
-</li>
-<li><p>微服务自身的限制</p>
-</li>
-<li><ul>
-<li>分布式的代价：分布式事务、分布式锁、远程调用等，不仅仅是实现，还有出现异常的解决方案</li>
-<li>协同代价：多个应用的部署和多个应用由不同的团队维护，这就是协同的的麻烦</li>
-<li>服务拆分需要很强的设计功力：对服务领域的正常切分是一个，不合适的切分粒度和切分方法会使得服务之间达不到目标的高内聚低耦合</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>参考资料： <a target="_blank" rel="noopener" href="https://leetcode-cn.com/leetbook/read/spring_cloud_alibaba_bootcamp/9m1mz7/">https://leetcode-cn.com/leetbook/read/spring_cloud_alibaba_bootcamp/9m1mz7/</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">架构发展历程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/12/09/%E6%9E%B6%E6%9E%84%E5%8F%91%E5%B1%95%E5%8F%B2/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/12/08/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2020/12/08/hello-world/" class="archive-article-date">
-  	<time datetime="2020-12-08T11:53:33.875Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/12/08/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
 
 
@@ -903,8 +374,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
