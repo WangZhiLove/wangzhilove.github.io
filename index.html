@@ -175,7 +175,7 @@
         <h2 id="服务的注册与发现"><a href="#服务的注册与发现" class="headerlink" title="服务的注册与发现"></a>服务的注册与发现</h2><p>Nacos Discovery 实现Spring Cloud的服务注册与发现</p>
 <p>Nacos Discovery 整合Spring Cloud负载均衡合服务调用</p>
 <h3 id="Nacos-Discovery进行服务的注册与发现"><a href="#Nacos-Discovery进行服务的注册与发现" class="headerlink" title="Nacos Discovery进行服务的注册与发现"></a>Nacos Discovery进行服务的注册与发现</h3><h4 id="Nacos-Discovery的注册"><a href="#Nacos-Discovery的注册" class="headerlink" title="Nacos Discovery的注册"></a>Nacos Discovery的注册</h4><p>使用<a target="_blank" rel="noopener" href="https://start.aliyun.com/bootstrap.html">Aliyun Java Initializer</a>来创建工程，创建页面如下：</p>
-<p>![nacos discovery](nacos discovery.png)</p>
+<p><img src="https://sbimg.cn/image/nacos-discovery.QRphR" alt="alibaba java initializer"></p>
 <p>上面不用说，重点在组建依赖和示例代码这，<strong>首先，选择组建依赖，选择nacos discover -&gt; 之后在选择示例代码，看看是选择服务提供方还是服务消费方</strong>，alibaba做了不同的例子，这个非常方便了。</p>
 <p>下载下来之后我们就可以正常使用了，这里的目的仅仅是在nacos的服务列表上可以找到我们启动的服务。下面进行代码的pom依赖，配置文件的展示：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">pom依赖：</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.boot&lt;&#x2F;groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-boot-starter-web&lt;&#x2F;artifactId&gt;</span><br><span class="line">&lt;&#x2F;dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;com.alibaba.cloud&lt;&#x2F;groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-cloud-starter-alibaba-nacos-discovery&lt;&#x2F;artifactId&gt;</span><br><span class="line">&lt;&#x2F;dependency&gt;</span><br><span class="line">application.properties：</span><br><span class="line"># 应用名称</span><br><span class="line">spring.application.name&#x3D;nacos-discovery-provider</span><br><span class="line"># Nacos帮助文档: https:&#x2F;&#x2F;nacos.io&#x2F;zh-cn&#x2F;docs&#x2F;concepts.html</span><br><span class="line"># Nacos认证信息</span><br><span class="line">spring.cloud.nacos.discovery.username&#x3D;nacos</span><br><span class="line">spring.cloud.nacos.discovery.password&#x3D;nacos</span><br><span class="line"># Nacos 服务发现与注册配置，其中子属性 server-addr 指定 Nacos 服务器主机和端口</span><br><span class="line">spring.cloud.nacos.discovery.server-addr&#x3D;127.0.0.1:8848</span><br><span class="line"># 注册到 nacos 的指定 namespace，默认为 public</span><br><span class="line">spring.cloud.nacos.discovery.namespace&#x3D;public</span><br><span class="line"># 应用服务 WEB 访问端口</span><br><span class="line">server.port&#x3D;8081</span><br></pre></td></tr></table></figure>
@@ -986,11 +986,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">nacos namespace group dataID</a>
+                <a href="javascript:void(0)" class="js-tag color2">架构发展历程</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">架构发展历程</a>
+                <a href="javascript:void(0)" class="js-tag color4">nacos namespace group dataID</a>
               </li>
             
             <div class="clearfix"></div>
