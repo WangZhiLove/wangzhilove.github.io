@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2020 | 诗我</title>
+  <title>Sentinel的简单集成和使用 | 诗我</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="诗我">
-<meta property="og:url" content="http://example.com/archives/2020/index.html">
+  <meta name="description" content="服务的熔断和限流流控降级 流量控制：针对突发的流量来进行限制，尽可能处理请求的同时来保障服务不被打垮 熔断降级：跨服务调用，依赖服务出现了不稳定的情况，请求的响应时间变长，调用服务的方法的响应时间也变长，线程会产生堆积，导致业务耗尽自身线程池，服务不可用。所以对不稳定的服务进行熔断降级，暂时切断不稳定调用，避免局部不稳定导致整体雪崩，这就是熔断降级。  SentinelSentinel是阿里巴巴开">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Sentinel的简单集成和使用">
+<meta property="og:url" content="http://example.com/2020/12/21/Sentinel%E7%9A%84%E7%AE%80%E5%8D%95%E9%9B%86%E6%88%90%E5%92%8C%E4%BD%BF%E7%94%A8/index.html">
 <meta property="og:site_name" content="诗我">
+<meta property="og:description" content="服务的熔断和限流流控降级 流量控制：针对突发的流量来进行限制，尽可能处理请求的同时来保障服务不被打垮 熔断降级：跨服务调用，依赖服务出现了不稳定的情况，请求的响应时间变长，调用服务的方法的响应时间也变长，线程会产生堆积，导致业务耗尽自身线程池，服务不可用。所以对不稳定的服务进行熔断降级，暂时切断不稳定调用，避免局部不稳定导致整体雪崩，这就是熔断降级。  SentinelSentinel是阿里巴巴开">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-12-21T11:59:08.000Z">
+<meta property="article:modified_time" content="2020-12-21T12:02:09.509Z">
 <meta property="article:author" content="王智">
+<meta property="article:tag" content="sentinel">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="诗我" type="application/atom+xml">
@@ -150,36 +155,77 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Sentinel的简单集成和使用" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/12/21/Sentinel%E7%9A%84%E7%AE%80%E5%8D%95%E9%9B%86%E6%88%90%E5%92%8C%E4%BD%BF%E7%94%A8/" class="archive-article-date">
-  	<time datetime="2020-12-21T11:59:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-21</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/12/21/Sentinel%E7%9A%84%E7%AE%80%E5%8D%95%E9%9B%86%E6%88%90%E5%92%8C%E4%BD%BF%E7%94%A8/">Sentinel的简单集成和使用</a>
+    <h1 class="article-title" itemprop="name">
+      Sentinel的简单集成和使用
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2020/12/21/Sentinel%E7%9A%84%E7%AE%80%E5%8D%95%E9%9B%86%E6%88%90%E5%92%8C%E4%BD%BF%E7%94%A8/" class="archive-article-date">
+  	<time datetime="2020-12-21T11:59:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="服务的熔断和限流"><a href="#服务的熔断和限流" class="headerlink" title="服务的熔断和限流"></a>服务的熔断和限流</h2><h3 id="流控降级"><a href="#流控降级" class="headerlink" title="流控降级"></a>流控降级</h3><ul>
+<li>流量控制：针对突发的流量来进行限制，尽可能处理请求的同时来保障服务不被打垮</li>
+<li>熔断降级：跨服务调用，依赖服务出现了不稳定的情况，请求的响应时间变长，调用服务的方法的响应时间也变长，线程会产生堆积，导致业务耗尽自身线程池，服务不可用。所以对不稳定的服务进行熔断降级，暂时切断不稳定调用，避免局部不稳定导致整体雪崩，这就是熔断降级。</li>
+</ul>
+<h3 id="Sentinel"><a href="#Sentinel" class="headerlink" title="Sentinel"></a>Sentinel</h3><p><a target="_blank" rel="noopener" href="https://github.com/alibaba/Sentinel">Sentinel</a>是阿里巴巴开源的，面向分布式服务架构的高可用防护组件，以流量为切入点，从流量控制、流量整形、熔断降级、系统自适应保护、热点防护等多个维护来帮助开发者保障微服务的稳定性。</p>
+<p>技术亮点：</p>
+<ul>
+<li>高度可扩展能力：基础核心 + SPI的接口扩展能力，用户可以方便的扩展流控、通信、监控等功能</li>
+<li>多样化的流量控制策略（资源粒度、调用关系、流控指标、流控效果等多个维度），提供分布式集群的流控能力</li>
+<li>热点流量的探测和防护</li>
+<li>对不稳定服务进行熔断降级和隔离</li>
+<li>全局维度的系统负载自适应保护，根据系统水位实时调节流量</li>
+<li>覆盖API Gateway场景，为Spring Cloud Gateway、Zuul提供网关流量控制的能力</li>
+<li>实时监控和规则动态配置管理能力</li>
+</ul>
+<h4 id="简单的使用"><a href="#简单的使用" class="headerlink" title="简单的使用"></a>简单的使用</h4><p>直接上代码，首先需要去<a target="_blank" rel="noopener" href="https://github.com/alibaba/Sentinel/tree/master/sentinel-dashboard">官方</a>下载包，之后打包，根据官方的推荐的启动，为了方便，这里将启动脚本放在下方：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> java -Dserver.port&#x3D;8080 \</span><br><span class="line">-Dcsp.sentinel.dashboard.server&#x3D;localhost:8080 \</span><br><span class="line">-Dproject.name&#x3D;sentinel-dashboard \</span><br><span class="line">-jar sentinel-dashboard-1.8.0.jar </span><br></pre></td></tr></table></figure>
+
+<p>接下里就要在自己的服务中加入相关的pom依赖和配置信息</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">pom依赖：</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;com.alibaba.cloud&lt;&#x2F;groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-cloud-starter-alibaba-sentinel&lt;&#x2F;artifactId&gt;</span><br><span class="line">&lt;&#x2F;dependency&gt;</span><br><span class="line">配置信息：</span><br><span class="line">spring:</span><br><span class="line">    cloud:</span><br><span class="line">        sentinel:</span><br><span class="line">            transport:</span><br><span class="line">                # 控制台ip</span><br><span class="line">                dashboard: 127.0.0.1:8080</span><br><span class="line">                # 不能被占用的随机端口，与sentinel交互的端口</span><br><span class="line">                port: 9998</span><br></pre></td></tr></table></figure>
+
+<p>之后就可以启动服务了，启动服务之后访问<a target="_blank" rel="noopener" href="http://localhost:8080/#/dashboard">http://localhost:8080/#/dashboard</a>进行Sentinel控制台的登录，账户密码默认是 sentinel，登录之后发现并没有我们所期待的服务，这是因为需要进行访问才可以在控制台看到服务。<br>访问之后，你就可以看到服务，并且可以在服务里面设置流控、降级等规则，最简单的测试就是设置一个流控，QPS设置为2，之后在浏览器访问服务，手动多刷新，尽量快，就可以看到Blocked by Sentinel (flow limiting）了，说明限流成功。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -191,274 +237,106 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2020/12/21/Sentinel%E7%9A%84%E7%AE%80%E5%8D%95%E9%9B%86%E6%88%90%E5%92%8C%E4%BD%BF%E7%94%A8/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/12/14/%E5%88%86%E5%B8%83%E5%BC%8F%E6%9C%8D%E5%8A%A1%E8%B0%83%E7%94%A8/" class="archive-article-date">
-  	<time datetime="2020-12-14T15:09:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-14</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/12/14/%E5%88%86%E5%B8%83%E5%BC%8F%E6%9C%8D%E5%8A%A1%E8%B0%83%E7%94%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">分布式服务调用</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/12/14/%E5%88%86%E5%B8%83%E5%BC%8F%E6%9C%8D%E5%8A%A1%E8%B0%83%E7%94%A8/">分布式服务调用</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">dubbo cloud</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/12/12/Nacos-Discovery-%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%8E%E5%8F%91%E7%8E%B0%EF%BC%8C%E6%9C%8D%E5%8A%A1%E8%B0%83%E7%94%A8/" class="archive-article-date">
-  	<time datetime="2020-12-12T03:07:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/12/12/Nacos-Discovery-%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%8E%E5%8F%91%E7%8E%B0%EF%BC%8C%E6%9C%8D%E5%8A%A1%E8%B0%83%E7%94%A8/">Nacos Discovery 服务注册与发现，服务调用</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">nacos discovery， 服务调用， OpenFeign，LoadBalance RestTemplate</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/12/11/nacos%E9%AB%98%E7%BA%A7%E9%85%8D%E7%BD%AE/" class="archive-article-date">
-  	<time datetime="2020-12-11T13:40:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/12/11/nacos%E9%AB%98%E7%BA%A7%E9%85%8D%E7%BD%AE/">nacos高级配置</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">nacos namespace group dataID</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/12/11/nacos%E5%88%86%E5%B8%83%E5%BC%8F%E9%85%8D%E7%BD%AE/" class="archive-article-date">
-  	<time datetime="2020-12-11T06:43:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/12/11/nacos%E5%88%86%E5%B8%83%E5%BC%8F%E9%85%8D%E7%BD%AE/">nacos分布式配置</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">nacos 分布式配置 动态刷新配置</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/12/10/Spring%E5%88%B0Spring-Cloud/" class="archive-article-date">
-  	<time datetime="2020-12-10T12:21:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/12/10/Spring%E5%88%B0Spring-Cloud/">Spring到Spring Cloud</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Spring、Spring Boot、Spring Cloud</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/12/09/%E6%9E%B6%E6%9E%84%E5%8F%91%E5%B1%95%E5%8F%B2/" class="archive-article-date">
-  	<time datetime="2020-12-09T11:24:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/12/09/%E6%9E%B6%E6%9E%84%E5%8F%91%E5%B1%95%E5%8F%B2/">架构发展史</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">架构发展历程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/12/08/hello-world/" class="archive-article-date">
-  	<time datetime="2020-12-08T11:53:33.875Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/12/08/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -481,8 +359,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
